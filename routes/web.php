@@ -11,5 +11,5 @@
 |
 */
 
-Route::get('/', 'WelcomeController');
-Route::get('/results', 'SavingsController@index');
+Route::get('/', 'WelcomeController@index');
+Route::get('/results', 'WelcomeController@calculate');

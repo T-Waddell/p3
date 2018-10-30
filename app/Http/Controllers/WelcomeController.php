@@ -6,8 +6,13 @@ use Illuminate\Http\Request;
 
 class WelcomeController extends Controller
 {
-    public function __invoke()
+    public function index()
     {
-        return view('welcome');
+        #return view('welcome');
+        return 'Show the instructions and the form.';
+    }
+    public function calculate()
+    {
+        return 'Calculate the results and redirect user back to form with the results.';
     }
 }

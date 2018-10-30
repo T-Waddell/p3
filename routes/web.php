@@ -11,10 +11,5 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
-Route::get('/mysavings', function () {
-    return 'My savings results.';
-});
+Route::get('/', 'WelcomeController');
+Route::get('/results', 'SavingsController@index');

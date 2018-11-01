@@ -13,3 +13,8 @@
 
 Route::get('/', 'WelcomeController@index');
 Route::get('/results', 'WelcomeController@calculate');
+
+/**
+ * Practice
+ */
+Route::any('/practice/{n?}', 'PracticeController@index');

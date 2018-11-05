@@ -2,6 +2,13 @@
 
 return [
 
+    'nav' => [
+        '/results' => 'Results',
+        '/practice' => 'Practice',
+        '/about' => 'About',
+        '/contact' => 'Contact',
+    ],
+
     /*
     |--------------------------------------------------------------------------
     | Application Name
@@ -13,7 +20,7 @@ return [
     |
     */
 
-    'name' => 'Project3',
+    'name' => 'Time to Save',
 
     /*
     |--------------------------------------------------------------------------

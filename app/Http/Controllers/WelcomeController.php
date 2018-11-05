@@ -9,7 +9,8 @@ class WelcomeController extends Controller
     public function index()
     {
         #return view('welcome');
-        return 'Show the instructions and the form.';
+        #return 'Show the instructions and the form.';
+        return view('welcome');
     }
     public function calculate()
     {

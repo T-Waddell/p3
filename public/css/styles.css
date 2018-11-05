@@ -1,0 +1,14 @@
+label {
+    display: block;
+}
+
+input {
+    display: block;
+}
+[type='radio'] {
+    display: inline;
+}
+
+form {
+    margin: 2rem 0;
+}

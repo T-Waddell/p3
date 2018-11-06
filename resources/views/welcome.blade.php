@@ -17,7 +17,7 @@
             </div>
             <div class="col-6">
                 <h1>Time to Save</h1>
-                <p>Use this calculator to learn how long your savings goal will take you.</p>
+                <p>Use this calculator to learn how long it will take you to reach your savings goal.</p>
                 <form method='GET' action='/results'>
 
                     <label>How much money do you want to save?
@@ -63,7 +63,7 @@
                 @if($calculated)
                     <div class='alert alert-primary' role='alert'>
                         <p>It will take you {{ $calculated }} {{ $cadence }} to save for your goal of ${{ $savingsGoal }}.</p>
-                        <p>You will reach your goal on approximately {{ $completeDate }}.</p>
+                        <p>If you start saving on {{ $startDate }}, you will reach your goal on approximately {{ $completeDate }}.</p>
                     </div>
                 @endif
             </div>

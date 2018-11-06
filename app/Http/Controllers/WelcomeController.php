@@ -72,8 +72,10 @@ class WelcomeController extends Controller
         #$completeDate = $startDate;
 
         $carbonStartDate = new Carbon($startDate);
+        $startDate = $carbonStartDate->toFormattedDateString();
         $completeDate = $carbonStartDate->addDays($daysToAdd);
         $completeDate = $completeDate->toFormattedDateString();
+
 
 
         # Redirect back to the search page w/ the data (if any) stored in the session

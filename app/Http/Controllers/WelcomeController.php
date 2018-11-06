@@ -32,6 +32,14 @@ class WelcomeController extends Controller
      */
     public function calculate(Request $request)
     {
+        # Validate the request data
+        $request->validate([
+            'savingsGoal' => 'required|numeric|min:1',
+            'savings' => 'required|numeric|min:1',
+            'cadence' => 'required',
+            'startDate' => 'required',
+        ]);
+
         #Get our variables from the form:
         $savingsGoal = $request->input('savingsGoal', '');
         $savings = $request->input('savings', '');

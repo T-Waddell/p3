@@ -4,7 +4,8 @@
 
 ## Outside resources
 * Styling via [Bootstrap CDN](https://www.bootstrapcdn.com)
-* [Stack Overflow post about how to add to a date variable](https://stackoverflow.com/questions/47830387/how-to-calculate-what-is-date-after-10-days-in-php)
+* [https://carbon.nesbot.com/docs/](Carbon extension) for adding a variable number of days to the start date the user selects in the form.
+* [https://stackoverflow.com/a/51192546](Stack Overflow post) for code for using the old() helper function for retaining the value of radio buttons after the form is submitted
 
 
 ## 3 Unique inputs

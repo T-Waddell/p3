@@ -21,26 +21,45 @@
                 <form method='GET' action='/results'>
 
                     <label>How much money do you want to save?
-                        <input type='text' name='savingsGoal' value='<?php if (isset($savingsGoal)) echo $savingsGoal ?>'>
+                        <input type='text' name='savingsGoal' value='{{ old('savingsGoal') }}'>
                     </label>
+                    @if($errors->get('savingsGoal'))
+                        <div class='error'>{{ $errors->first('savingsGoal') }}</div>
+                    @endif
                     <label>How much money can you put into savings each week or month?
-                        <input type='text' name='savings' value='<?php if (isset($savings)) echo $savings ?>'>
+                        <input type='text' name='savings' value='{{ old('savings') }}'>
                     </label>
+                    @if($errors->get('savings'))
+                        <div class='error'>{{ $errors->first('savings') }}</div>
+                    @endif
+                    <!--
+                    Code for retaining the radio checked for the form from Stack Overflow: https://stackoverflow.com/a/51192546
+                    -->
                     <label><input type='radio'
                                   name='cadence'
-                                  value='weekly' <?php if (isset($cadence) AND $cadence == 'weeks') echo 'checked' ?>> Weekly</label>
+                                  value='weekly' {{(old('cadence') == 'weekly') ? 'checked' : ''}}> Weekly</label>
                     <label><input type='radio'
                                   name='cadence'
-                                  value='monthly' <?php if (isset($cadence) AND $cadence == 'months') echo 'checked' ?>> Monthly</label>
+                                  value='monthly' {{(old('cadence') == 'monthly') ? 'checked' : ''}}> Monthly</label>
+                    @if($errors->get('cadence'))
+                        <div class='error'>{{ $errors->first('cadence') }}</div>
+                    @endif
                     <label>What date do you plan to start saving?
                         <input type="date"
                                id="start"
                                name="startDate"
-                               value='<?php if (isset($startDate)) echo $startDate ?>'>
+                               value='{{ old('startDate') }}'>
                     </label>
+                    @if($errors->get('startDate'))
+                        <div class='error'>{{ $errors->first('startDate') }}</div>
+                    @endif
                     <input type='submit' value='Calculate'>
                 </form>
-
+                @if(count($errors) > 0)
+                    <ul class='alert alert-danger'>
+                        Please correct the errors above.
+                    </ul>
+                @endif
                 @if($calculated)
                     <div class='alert alert-primary' role='alert'>
                         <p>It will take you {{ $calculated }} {{ $cadence }} to save for your goal of ${{ $savingsGoal }}.</p>

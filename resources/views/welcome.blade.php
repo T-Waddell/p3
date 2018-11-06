@@ -18,7 +18,7 @@
             <div class="col-6">
                 <h1>Time to Save</h1>
                 <p>Use this calculator to learn how long your savings goal will take you.</p>
-                <form method='GET' action='calculate.php'>
+                <form method='GET' action='/results'>
 
                     <label>How much money do you want to save?
                         <input type='text' name='savingsGoal' value='<?php if (isset($savingsGoal)) echo $savingsGoal ?>'>
@@ -40,6 +40,13 @@
                     </label>
                     <input type='submit' value='Calculate'>
                 </form>
+
+                @if($calculated)
+                    <div class='alert alert-primary' role='alert'>
+                        <p>It will take you {{ $calculated }} {{ $cadence }} to save for your goal of ${{ $savingsGoal }}.</p>
+                        <p>You will reach your goal on approximately {{ $completeDate }}.</p>
+                    </div>
+                @endif
             </div>
             <div class="col">
 

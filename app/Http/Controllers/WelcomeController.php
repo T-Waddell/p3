@@ -21,6 +21,7 @@ class WelcomeController extends Controller
             'savingsGoal' => $request->session()->get('savingsGoal', ''),
             'savings' => $request->session()->get('savings', ''),
             'startDate' => $request->session()->get('startDate', ''),
+            'stringStartDate' => $request->session()->get('stringStartDate', ''),
             'daysToAdd' => $request->session()->get('daysToAdd'),
             'completeDate' => $request->session()->get('completeDate', '')
         ]);
@@ -72,7 +73,7 @@ class WelcomeController extends Controller
         #$completeDate = $startDate;
 
         $carbonStartDate = new Carbon($startDate);
-        $startDate = $carbonStartDate->toFormattedDateString();
+        $stringStartDate = $carbonStartDate->toFormattedDateString();
         $completeDate = $carbonStartDate->addDays($daysToAdd);
         $completeDate = $completeDate->toFormattedDateString();
 
@@ -86,6 +87,7 @@ class WelcomeController extends Controller
             'savingsGoal' => $savingsGoal,
             'savings' => $savings,
             'startDate' => $startDate,
+            'stringStartDate' => $stringStartDate,
             'daysToAdd' => $daysToAdd,
             'completeDate' => $completeDate
         ]);

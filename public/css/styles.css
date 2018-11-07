@@ -14,9 +14,9 @@ body {
     #0909ab
         #00d4ff*/
     background: rgb(0,212,255);
-    background: -moz-linear-gradient(0deg, rgba(0,212,255,1) 0%, rgba(0,166,255,1) 69%, rgba(0,140,255,1) 100%);
-    background: -webkit-linear-gradient(0deg, rgba(0,212,255,1) 0%, rgba(0,166,255,1) 69%, rgba(0,140,255,1) 100%);
-    background: linear-gradient(0deg, rgba(0,212,255,1) 0%, rgba(0,166,255,1) 69%, rgba(0,140,255,1) 100%);
+    background: -moz-linear-gradient(0deg, rgba(0,212,255,1) 0%, rgba(0,166,255,1) 46%, rgba(0,112,255,1) 100%);
+    background: -webkit-linear-gradient(0deg, rgba(0,212,255,1) 0%, rgba(0,166,255,1) 46%, rgba(0,112,255,1) 100%);
+    background: linear-gradient(0deg, rgba(0,212,255,1) 0%, rgba(0,166,255,1) 46%, rgba(0,112,255,1) 100%);
     /* sticky footer - match footer height */
     margin-bottom: 60px;
 }

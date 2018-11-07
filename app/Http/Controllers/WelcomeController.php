@@ -13,8 +13,6 @@ class WelcomeController extends Controller
      */
     public function index(Request $request)
     {
-        #return view('welcome');
-        #return 'Show the instructions and the form.';
         return view('welcome')->with([
             'calculated' => $request->session()->get('calculated', ''),
             'cadence' => $request->session()->get('cadence', ''),
@@ -58,26 +56,18 @@ class WelcomeController extends Controller
         #Calculate the length of time needed to reach the savings goal:
         $calculated = ceil($savingsGoal / $savings);
 
+        #Convert the length of time to days:
         if ($cadence == 'weeks') {
             $daysToAdd = $calculated * 7;
         } else if ($cadence == 'months') {
             $daysToAdd = $calculated * 30;
         }
 
-        #convert the string to an integer
-        #$daysToAdd = intval($daysToAdd);
-
         #Add days to the start date:
-        #$completeDate = date('m-d-y', strtotime("$startDate +$this->$daysToAdd days"));
-        #$completeDate = $startDate->addDays($daysToAdd);
-        #$completeDate = $startDate;
-
         $carbonStartDate = new Carbon($startDate);
         $stringStartDate = $carbonStartDate->toFormattedDateString();
         $completeDate = $carbonStartDate->addDays($daysToAdd);
         $completeDate = $completeDate->toFormattedDateString();
-
-
 
         # Redirect back to the search page w/ the data (if any) stored in the session
         # Ref: https://laravel.com/docs/redirects#redirecting-with-flashed-session-data

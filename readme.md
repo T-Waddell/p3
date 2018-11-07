@@ -6,6 +6,9 @@
 * Styling via [Bootstrap CDN](https://www.bootstrapcdn.com)
 * [https://carbon.nesbot.com/docs/](Carbon extension) for adding a variable number of days to the start date the user selects in the form.
 * [https://stackoverflow.com/a/51192546](Stack Overflow post) for code for using the old() helper function for retaining the value of radio buttons after the form is submitted
+* Sticky footer code from the DWA15 course example application.
+* [Raleway font](https://fonts.google.com/specimen/Raleway) via Google Fonts
+* [Source Sans Pro font](https://fonts.google.com/specimen/Source+Sans+Pro) via Google Fonts
 
 
 ## 3 Unique inputs
@@ -14,7 +17,7 @@
 3. Date input to select the date the user plans to start saving
 
 ## Packages
-*List the name of any packages you add to your project that do not come with Laravel by default; this should include, but is not limited to, barryvdh/laravel-debugbar*
+* barryvdh/laravel-debugbar
 
 ## Code style divergences
 *No divergences from PSR-1/PSR-2 and course guidelines on code style*

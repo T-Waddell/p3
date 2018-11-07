@@ -8,7 +8,6 @@
     <div class="container">
         <div class="row">
             <div class="col">
-
             </div>
             <div class="col-6">
                 <h1>{{ config('app.name') }}</h1>
@@ -27,16 +26,16 @@
                     @if($errors->get('savings'))
                         <div class='error'>{{ $errors->first('savings') }}</div>
                     @endif
-                    <!--
+                <!--
                     Code for retaining the radio checked for the form from Stack Overflow: https://stackoverflow.com/a/51192546
                     -->
                     <label class='radio'><input type='radio'
-                                  name='cadence'
-                                  value='weekly'
+                                                name='cadence'
+                                                value='weekly'
                                 {{ (old('cadence', $cadence) == 'weekly') ? 'checked' : '' }}> Weekly</label>
                     <label class='radio'><input type='radio'
-                                  name='cadence'
-                                  value='monthly' {{(old('cadence', $cadence) == 'monthly') ? 'checked' : ''}}> Monthly</label>
+                                                name='cadence'
+                                                value='monthly' {{(old('cadence', $cadence) == 'monthly') ? 'checked' : ''}}> Monthly</label>
                     @if($errors->get('cadence'))
                         <div class='error'>{{ $errors->first('cadence') }}</div>
                     @endif
@@ -64,7 +63,6 @@
                 @endif
             </div>
             <div class="col">
-
             </div>
         </div>
     </div>

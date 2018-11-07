@@ -14,11 +14,6 @@
 Route::get('/', 'WelcomeController@index');
 Route::get('/results', 'WelcomeController@calculate');
 
-/* Static pages */
-Route::view('/about', 'about');
-Route::view('/contact', 'contact');
-
-
 /**
  * Practice
  */

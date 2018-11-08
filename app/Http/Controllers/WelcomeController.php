@@ -59,9 +59,9 @@ class WelcomeController extends Controller
         $calculated = ceil($savingsGoal / $savings);
 
         #Convert the length of time to days:
-        if ($cadence == 'weeks') {
+        if ($cadence == 'weekly') {
             $daysToAdd = $calculated * 7;
-        } else if ($cadence == 'months') {
+        } else if ($cadence == 'monthly') {
             $daysToAdd = $calculated * 30;
         }
 

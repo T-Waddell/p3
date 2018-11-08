@@ -70,7 +70,8 @@ form {
 }
 
 footer {
-    text-align: center;
+    text-align: left;
+    padding-left: 2rem;
 
     /* sticky footer - code from the DWA15 course example application */
     position: absolute;

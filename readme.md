@@ -21,6 +21,3 @@
 
 ## Code style divergences
 *No divergences from PSR-1/PSR-2 and course guidelines on code style*
-
-## Notes for instructor
-*Any notes for me to refer to while grading; if none, omit this section*

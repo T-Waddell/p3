@@ -57,7 +57,7 @@
                 @endif
                 @if($calculated)
                     <div class='alert alert-primary' role='alert'>
-                        <p>It will take you {{ $calculated }} {{ $cadence }} to save for your goal of ${{ $savingsGoal }}.</p>
+                        <p>It will take you {{ $calculated }} {{ $cadenceForPrint }} to save for your goal of ${{ $savingsGoal }}.</p>
                         <p>If you start saving on {{ $stringStartDate }}, you will reach your goal on approximately {{ $completeDate }}.</p>
                     </div>
                 @endif

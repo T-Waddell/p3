@@ -16,6 +16,7 @@ class WelcomeController extends Controller
         return view('welcome')->with([
             'calculated' => $request->session()->get('calculated', ''),
             'cadence' => $request->session()->get('cadence', ''),
+            'cadenceForPrint' => $request->session()->get('cadenceForPrint', ''),
             'savingsGoal' => $request->session()->get('savingsGoal', ''),
             'savings' => $request->session()->get('savings', ''),
             'startDate' => $request->session()->get('startDate', ''),
@@ -45,12 +46,13 @@ class WelcomeController extends Controller
         $cadence = $request->input('cadence', null);
         $startDate = $request->input('startDate');
         $daysToAdd = 0;
+        $cadenceForPrint = '';
 
         #Adjust the cadence verbiage:
         If ($cadence == 'weekly') {
-            $cadence = 'weeks';
+            $cadenceForPrint = 'weeks';
         } else {
-            $cadence = 'months';
+            $cadenceForPrint = 'months';
         }
 
         #Calculate the length of time needed to reach the savings goal:
@@ -74,6 +76,7 @@ class WelcomeController extends Controller
         return redirect('/')->with([
             'calculated' => $calculated,
             'cadence' => $cadence,
+            'cadenceForPrint' => $cadenceForPrint,
             'savingsGoal' => $savingsGoal,
             'savings' => $savings,
             'startDate' => $startDate,
